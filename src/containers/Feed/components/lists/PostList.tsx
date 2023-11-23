@@ -54,7 +54,9 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
     <>
       <div className="my-2">
         {!filteredPosts.length && (
-          <p className="text-gray-500 dark:text-gray-300">Nothing! 😺</p>
+          <div className="flex h-full items-center justify-center">
+          <p className="text-gray-500 dark:text-gray-400">작성된 글이 없습니다.</p>
+        </div>        
         )}
         {filteredPosts.map((post) => (
           <PostCard key={post.id} data={post} />

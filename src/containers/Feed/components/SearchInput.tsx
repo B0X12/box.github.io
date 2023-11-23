@@ -5,11 +5,23 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 const SearchInput: React.FC<Props> = ({ ...props }) => {
   return (
     <div className="mb-4 md:mb-8">
-      <div className="p-1 mb-3 dark:text-white">🔎 Search</div>
+      <div className="p-1 mb-3 text-black dark:text-white">🔎 sᴇᴀʀᴄʜ</div>
       <input
-        className="rounded-2xl px-5 py-2 w-full bg-gray-200 dark:bg-zinc-700 dark:text-white focus:bg-white focus:shadow-md outline-none transition"
+        className="
+          rounded-2xl 
+          px-5 
+          py-2 
+          w-full 
+          outline-none
+          bg-white
+          dark:bg-black-80 
+          dark:text-white 
+          focus:shadow-light 
+          dark:bg-black-80/50 
+          dark:focus:shadow-dark 
+          transition"
         type="text"
-        placeholder="Search Keyword..."
+        placeholder="검색어를 입력하세요"
         {...props}
       />
     </div>

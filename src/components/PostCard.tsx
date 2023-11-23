@@ -18,7 +18,22 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <a>
         <article
           key={data.id}
-          className="relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-700 hover:shadow-lg transition-shadow "
+          className="
+          relative 
+          overflow-hidden 
+          mb-6 
+          md:mb-8 
+          rounded-2xl 
+          bg-white  
+          dark:bg-black-80 
+          hover:shadow-light 
+          dark:hover:shadow-dark 
+          transition-transform 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:translate-y-[-6px]
+          transition-shadow "
         >
           {category && (
             <Category className="absolute top-4 left-4 z-10">
@@ -26,7 +41,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             </Category>
           )}
           {data.thumbnail && (
-            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-zinc-700 ">
+            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-black-80 ">
               <Image
                 src={data.thumbnail}
                 className="object-cover"
@@ -64,7 +79,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
                   <div className="self-stretch w-px my-1 bg-gray-300"></div>
                 </>
               )} */}
-              <div className="text-sm text-gray-500 dark:text-gray-400 md:ml-0">
+              <div className="text-sm text-gray-500 dark:text-gray-500 md:ml-0">
                 {formatDate(
                   data?.date?.start_date || data.createdTime,
                   CONFIG.lang
@@ -72,7 +87,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
               </div>
             </div>
             <div className="mb-4">
-              <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
+              <p className="hidden md:block leading-8 text-gray-400 dark:text-gray-00">
                 {data.summary}
               </p>
             </div>

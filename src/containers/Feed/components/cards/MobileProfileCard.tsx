@@ -9,7 +9,7 @@ type Props = {
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <div className="block lg:hidden">
-      <div className="p-1 mb-3 dark:text-white">💻 Profile</div>
+      <div className="p-1 mb-3 text-black dark:text-white">ᴘʀᴏғɪʟᴇ</div>
       <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
         <div className="flex items-center gap-2">
           <Image

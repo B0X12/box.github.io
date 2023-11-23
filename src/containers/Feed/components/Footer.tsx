@@ -19,7 +19,7 @@ const Footer: React.FC<Props> = ({ className }) => {
         className="text-gray-500 text-sm mt-3"
         rel="noreferrer"
       >
-        © {CONFIG.profile.name} {from === y || !from ? y : `${from} - ${y}`}
+        © {CONFIG.profile._name} {from === y || !from ? y : `${from} - ${y}`}
       </a>
     </div>
   )

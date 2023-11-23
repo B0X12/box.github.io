@@ -2,9 +2,10 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "📦 box",
+    _name: "𝙗𝙤𝙭",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "backend developer",
-    bio: "I develop everything using node.",
+    bio: "문서 작성과 디자인을 좋아하는 수상한 백엔드 개발자. Java/Spring을 합니다.",
     email: "box0_@naver.com",
     linkedin: "",
     github: "BOX12",
@@ -12,9 +13,9 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `morethan-log`,
-      href: "https://github.com/morethanmin/morethan-log",
-    },
+      name: `foodage (🗓 23.08.~)`,
+      href: "https://github.com/foodage/server",
+    }
   ],
   // blog setting (required)
   blog: {
@@ -25,7 +26,7 @@ const CONFIG = {
 
   // CONFIG configration (required)
   link: "https://morethan-log.vercel.app",
-  since: 2022, // If leave this empty, current year will be used.
+  since: 2023, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
   seo: {

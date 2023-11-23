@@ -1,27 +1,42 @@
-import NavBar from "./NavBar"
-import Logo from "./Logo"
-import ThemeToggle from "./ThemeToggle"
+import NavBar from "./NavBar";
+import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 type Props = {
-  fullWidth: boolean
-}
+  fullWidth: boolean;
+};
 
 const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
-    <div className="shadow-sm transition sticky bg-white dark:bg-zinc-700 mb-2 md:mb-6 border-b-[1px] z-[40] border-gray-100 dark:border-gray-800 top-0">
+    <div
+      className="
+        sticky 
+        bg-blend-multiply
+        mb-2 
+        md:mb-6 
+        z-[40] 
+        top-0 
+        backdrop-blur-md
+        border-none"
+      style={{
+        height: '70px',
+      }}
+    >
       <div
-        className={`m-auto px-4 h-12 w-full max-w-6xl flex justify-between items-center ${
+        className={`m-auto h-full max-w-6xl flex justify-between items-center ${
           fullWidth && "md:px-24"
         }`}
       >
-        <Logo />
-        <div className={`flex gap-3 items-center `}>
+        <div className={`flex gap-3 items-center text-xl font-bold`}>
+          <Logo />
+        </div>
+        <div className={`flex gap-3 items-center text-gray-400`}>
           <ThemeToggle />
           <NavBar />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

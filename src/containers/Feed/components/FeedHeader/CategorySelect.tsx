@@ -27,16 +27,16 @@ const CategorySelect: React.FC<Props> = ({ data }) => {
     <div className="relative">
       <div
         ref={dropdownRef}
-        className="text-xl font-bold my-2 dark:text-white flex gap-1 items-center cursor-pointer"
+        className="text-xl font-bold my-2 text-black dark:text-white flex gap-1 items-center cursor-pointer"
         onClick={handleOpen}
       >
         {currentCategory} Posts <MdExpandMore />
       </div>
       {opened && (
-        <div className="absolute bg-white z-40 p-1 rounded-xl shadow-md">
+        <div className="absolute bg-white dark:text-white dark:bg-black-60 z-40 p-1 rounded-xl shadow-md">
           {Object.keys(data).map((key, idx) => (
             <div
-              className="whitespace-nowrap hover:bg-gray-200 p-1 px-2 rounded-xl text-sm cursor-pointer"
+              className="whitespace-nowrap hover:bg-gray-200 dark:hover:bg-black-40 p-1 px-2 rounded-xl text-sm cursor-pointer"
               key={idx}
               onClick={() => handleOptionClick(key)}
             >
