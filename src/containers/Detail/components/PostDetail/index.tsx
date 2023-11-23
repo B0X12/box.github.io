@@ -8,6 +8,7 @@ import CommentBox from "./CommentBox"
 import Category from "@components/Category"
 import Image from "next/image"
 import Link from "next/link"
+
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then((m) => m.Code)
 )
@@ -46,12 +47,12 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
 
   return (
     <div
-      className={`m-auto max-w-4xl bg-white dark:bg-zinc-700 rounded-3xl py-12 px-6 shadow-md`}
+      className={`m-auto max-w-4xl bg-white dark:bg-black-80 rounded-3xl py-12 px-6 shadow-xl`}
     >
       <article className=" m-auto max-w-2xl">
         {category && (
           <Category
-            className="mb-2"
+            className="mb-12 dark:bg-opacity-80"
             readOnly={data.status?.[0] === "PublicOnDetail"}
           >
             {category}
@@ -59,7 +60,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
         )}
         {data.type[0] === "Post" && <PostHeader data={data} />}
         {blockMap && (
-          <div className="-mt-4">
+          <div className="-mt-3">
             <NotionRenderer
               recordMap={blockMap}
               components={{

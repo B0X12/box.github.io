@@ -4,8 +4,8 @@
 
 html {
   font-family: "Pretendard", "Roboto", sans-serif;
-  --scrollbarBG: #ffffff00;
-  --thumbBG: #b8b8b8;
+  --scrollbarBG: #1f2024;
+  --thumbBG: #393b42;
 }
 body::-webkit-scrollbar {
   width: 5px;

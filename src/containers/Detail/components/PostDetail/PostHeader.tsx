@@ -16,8 +16,8 @@ const PostHeader: React.FC<Props> = ({ data }) => {
         {data.title}
       </h1>
       {data.type[0] !== "Paper" && (
-        <nav className="mt-6 text-gray-500 dark:text-gray-400">
-          <div className="flex items-center gap-3 mb-3">
+        <nav className="mt-2.5 text-gray-500 dark:text-gray-400">
+          <div className="flex items-center gap-3 mb-6">
             {data.author && data.author[0] && data.author[0].name && (
               <>
                 <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
               )}
             </div>
           </div>
-          <div className="flex items-center mb-4">
+          <div className="flex items-center mb-5">
             {data.tags && (
               <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags gap-2">
                 {data.tags.map((tag: string) => (

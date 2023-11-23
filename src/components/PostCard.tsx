@@ -36,7 +36,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
           transition-shadow "
         >
           {category && (
-            <Category className="absolute top-4 left-4 z-10">
+            <Category className="absolute top-4 left-4 z-10 bg-opacity-40 dark:text-black-80">
               {category}
             </Category>
           )}
