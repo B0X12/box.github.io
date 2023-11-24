@@ -16,7 +16,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         md:mb-6 
         z-[40] 
         top-0 
-        backdrop-blur-md
+        backdrop-blur-2xl 
         border-none"
       style={{
         height: '70px',
