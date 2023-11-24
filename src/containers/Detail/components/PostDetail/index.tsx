@@ -1,3 +1,4 @@
+import 'prismjs/themes/prism.css'
 import { NotionRenderer } from "react-notion-x"
 import dynamic from "next/dynamic"
 import { TPost } from "@/src/types"
@@ -9,8 +10,23 @@ import Category from "@components/Category"
 import Image from "next/image"
 import Link from "next/link"
 
+// const Code = dynamic(() =>
+//   import("react-notion-x/build/third-party/code").then((m) => m.Code)
+// )
+
+
 const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then((m) => m.Code)
+  import('react-notion-x/build/third-party/code').then(async (m) => {
+    await Promise.all([
+      import('prismjs/components/prism-bash.js'),
+      import('prismjs/components/prism-docker.js'),
+      import('prismjs/components/prism-java.js'),
+      import('prismjs/components/prism-git.js'),
+      import('prismjs/components/prism-sql.js'),
+      import('prismjs/components/prism-yaml.js')
+    ])
+    return m.Code
+  })
 )
 const Collection = dynamic(() =>
   import("react-notion-x/build/third-party/collection").then(
@@ -49,7 +65,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
     <div
       className={`m-auto max-w-4xl bg-white dark:bg-black-80 rounded-3xl py-12 px-6 shadow-xl`}
     >
-      <article className=" m-auto max-w-2xl">
+      <article className="m-auto max-w-2xl">
         {category && (
           <Category
             className="mb-9 dark:bg-opacity-50"
