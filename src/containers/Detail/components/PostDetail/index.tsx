@@ -52,7 +52,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
       <article className=" m-auto max-w-2xl">
         {category && (
           <Category
-            className="mb-12 dark:bg-opacity-80"
+            className="mb-9 dark:bg-opacity-50"
             readOnly={data.status?.[0] === "PublicOnDetail"}
           >
             {category}
