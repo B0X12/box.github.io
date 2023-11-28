@@ -1,4 +1,4 @@
-import 'prismjs/themes/prism.css'
+// import prsmjs from "prismjs/components"
 import { NotionRenderer } from "react-notion-x"
 import dynamic from "next/dynamic"
 import { TPost } from "@/src/types"
@@ -18,12 +18,6 @@ import Link from "next/link"
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then(async (m) => {
     await Promise.all([
-      import('prismjs/components/prism-bash.js'),
-      import('prismjs/components/prism-docker.js'),
-      import('prismjs/components/prism-java.js'),
-      import('prismjs/components/prism-git.js'),
-      import('prismjs/components/prism-sql.js'),
-      import('prismjs/components/prism-yaml.js')
     ])
     return m.Code
   })

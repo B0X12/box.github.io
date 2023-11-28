@@ -3373,7 +3373,7 @@ prettier@^3.1.0:
   resolved "https://registry.npmjs.org/prettier/-/prettier-3.1.0.tgz"
   integrity sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==
 
-prismjs@^1.27.0, prismjs@^1.29.0:
+prismjs@^1.27.0:
   version "1.29.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.29.0.tgz"
   integrity sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==
